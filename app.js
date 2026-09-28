@@ -867,7 +867,7 @@
       function loadSavedLogo() {
         try {
           const saved = localStorage.getItem('satrlarim-logo');
-          if (saved && brandLogo) brandLogo.src = saved;
+          if (brandLogo) brandLogo.src = saved === 'assets/logo1.svg' ? saved : 'assets/logo1.svg';
         } catch {}
       }
 
